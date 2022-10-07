@@ -20,7 +20,7 @@ body {
 
 .menu {
   height: 810px;
-  width: 160px;
+  width: 180px;
   background-color: #303030;
   border-radius: 10px;
   overflow-x: hidden;
@@ -28,7 +28,6 @@ body {
 
 .container {
   display: grid;
-  padding: 5px;
   grid-template-columns: auto auto;
   justify-content: center;
   grid-gap: 10px;
@@ -36,7 +35,7 @@ body {
 
 .page-body {
   height: 810px;
-  width: 1200px;
+  width: 1230px;
   border-radius: 10px;
   background-color: #303030;
 }
@@ -46,8 +45,10 @@ body {
   position: relative;
   display: block;
   line-height: 36px;
-  font-size: 14px;
-  color: #ffffff;
+  font-size: 16px;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  color: #c6c5c5;
   border: 1px solid transparent;
   transition: all 0.3s;
 }
@@ -61,62 +62,26 @@ body {
   padding-left: 5px;
   border-radius: 10px;
   height: 50px;
-  width: 155px;
+  width: 175px;
   background-color: #ffc222;
 }
 
-a {
-  padding: 0 20px;
-  text-decoration: none;
-  font-family: "PT Serif", serif;
-  font-weight: 400;
-  line-height: 18px;
-  color: #c6c5c5;
-}
-
-.my-day::before {
-  content: "\e971";
-  font-family: "icomoon" !important;
-  position: absolute;
+.icon-user,
+.icon-star-o,
+.icon-calendar,
+.icon-sun,
+.icon-tasks,
+.icon-search {
   line-height: 36px;
-  left: 5px;
+  padding-left: 5px;
   color: #ffc222;
 }
 
-.important::before {
-  content: "\f006";
-  font-family: "icomoon" !important;
-  position: absolute;
-  line-height: 36px;
-  left: 5px;
-  color: #ffc222;
-}
-
-.planned::before {
-  content: "\e953";
-  font-family: "icomoon" !important;
-  position: absolute;
-  line-height: 36px;
-  left: 5px;
-  color: #ffc222;
-}
-
-.assigned-to-me::before {
-  content: "\e971";
-  font-family: "icomoon" !important;
-  position: absolute;
-  line-height: 36px;
-  left: 5px;
-  color: #ffc222;
-}
-
-.tasks::before {
-  content: "\f0ae";
-  font-family: "icomoon" !important;
-  position: absolute;
-  line-height: 36px;
-  left: 5px;
-  color: #ffc222;
+.bar-element-search {
+  background-color: rgb(255, 255, 255);
+  color: #a19f9d;
+  margin: 10px 5px 0;
+  border-radius: 10px;
 }
 
 body * {
