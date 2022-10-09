@@ -83,6 +83,9 @@ body {
   margin: 10px 5px 0;
   border-radius: 10px;
 }
+.bar-element-search input {
+  border: 0;
+}
 
 body * {
   scrollbar-width: thin;
