@@ -22,6 +22,7 @@ function addTask(text, list) {
     id: timestap,
     text,
     isComplete: false,
+    // isImportant: false,
   };
   list.push(task);
 }
@@ -50,6 +51,7 @@ function tasksRender(list) {
   list.forEach((task) => {
     const cls = task.isComplete ? "todo-task todo-task-complete" : "todo-task";
     const checked = task.isComplete ? "checked" : "";
+    // const isImportant = task.isImportant ? "checked" : "";
     const taskHtml = `
         <div id="${task.id}" class="${cls}">
         <label class="todo-checkbox">
@@ -58,6 +60,7 @@ function tasksRender(list) {
         </label>
         <div class="todo-task-title">${task.text}</div>
         <div class="todo-task-del">-</div>
+        
       </div>`;
 
     htmlList = htmlList + taskHtml;

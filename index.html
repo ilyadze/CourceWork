@@ -13,9 +13,13 @@
     <div class="container">
       <nav class="menu">
         <div class="user-account"></div>
-        <div id="menu-search" class="bar-element bar-element-search">
-          <span class="icon-search"></span>
-          <input type="text" placeholder="Поиск задачи" />
+        <div id="menu-search" class="bar-element">
+          <!-- <span class="icon-search"></span> -->
+          <input
+            class="bar-element-search"
+            type="text"
+            placeholder="Поиск задачи"
+          />
         </div>
         <div id="menu-my-day" class="bar-element">
           <span class="icon-sun"></span>
@@ -39,7 +43,10 @@
         </div>
       </nav>
       <div class="page-body">
-        <div class="todo-title">Мой день</div>
+        <div class="todo-title">
+          <span class="icon-sun"></span>
+          Мой день
+        </div>
         <div class="todo-new">
           <input id="new" type="text" placeholder="Новая задача" />
           <div id="add" class="todo-add">+</div>

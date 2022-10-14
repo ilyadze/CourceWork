@@ -61,6 +61,7 @@ body {
 .user-account {
   padding-left: 5px;
   border-radius: 10px;
+  margin-bottom: 10px;
   height: 50px;
   width: 175px;
   background-color: #ffc222;
@@ -80,8 +81,9 @@ body {
 .bar-element-search {
   background-color: rgb(255, 255, 255);
   color: #a19f9d;
-  margin: 10px 5px 0;
   border-radius: 10px;
+  width: 177px;
+  line-height: 36px;
 }
 .bar-element-search input {
   border: 0;
@@ -141,6 +143,9 @@ body * {
   min-height: var(--size);
   align-items: center;
   color: #a19f9d;
+  background-color: rgb(255, 194, 34, 0.1);
+  border-radius: 10px;
+  margin-left: 20px;
 }
 .todo-task-complete .todo-task-title {
   text-decoration: line-through;
