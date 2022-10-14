@@ -59,7 +59,7 @@ function tasksRender(list) {
           <div class="todo-checkbox-div"></div>
         </label>
         <div class="todo-task-title">${task.text}</div>
-        <div class="todo-task-del">-</div>
+        <div class="todo-task-setting">...</div>
         
       </div>`;
 
@@ -77,10 +77,11 @@ dom.tasks.onclick = (event) => {
     changeTaskStatus(taskId, tasks);
     tasksRender(tasks);
   }
-  if (target.classList.contains("todo-task-del")) {
+  if (target.classList.contains("todo-task-setting")) {
     const task = target.parentElement;
     const taskId = task.getAttribute("id");
-    deleteTask(taskId, tasks);
+    // deleteTask(taskId, tasks);
+
     tasksRender(tasks);
   }
 };
@@ -99,6 +100,24 @@ function deleteTask(id, list) {
   list.forEach((task, idx) => {
     if (task.id == id) {
       list.splice(idx, 1);
+    }
+  });
+}
+
+function addSettings(id, list) {
+  const checked = task.isComplete ? "checked" : "";
+  const cls = task.isComplete ? "todo-task todo-task-complete" : "todo-task";
+  list.forEach((task, idx) => {
+    if (task.id == id) {
+      `<div id="${task.id}" class="${cls}">
+        <label class="todo-checkbox">
+          <input type="checkbox" ${checked} />
+          <div class="todo-checkbox-div"></div>
+        </label>
+        <div class="todo-task-title">${task.text}</div>
+        <div class="todo-task-setting">...</div>
+        
+      </div>`;
     }
   });
 }

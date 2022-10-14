@@ -62,12 +62,14 @@ body {
   padding-left: 5px;
   border-radius: 10px;
   margin-bottom: 10px;
+  font-size: 32px;
+  line-height: 50px;
   height: 50px;
   width: 175px;
   background-color: #ffc222;
 }
 
-.icon-user,
+.icon-trash-o,
 .icon-star-o,
 .icon-calendar,
 .icon-sun,
@@ -108,6 +110,7 @@ body * {
   --size: 50px;
   display: flex;
   margin: 16px 0 32px;
+  border: 1px solid transparent;
 }
 
 .todo-new input {
@@ -120,7 +123,7 @@ body * {
 }
 
 .todo-add,
-.todo-task-del {
+.todo-task-setting {
   cursor: pointer;
   text-align: center;
   line-height: var(--size);
@@ -128,10 +131,11 @@ body * {
   color: #c6c5c5;
   height: var(--size);
   width: var(--size);
+  border: 1px solid transparent;
 }
 
 .todo-add:hover,
-.todo-task-del:hover {
+.todo-task-setting:hover {
   border: 1px solid #ffc222;
   border-radius: 10px;
 }
@@ -143,6 +147,7 @@ body * {
   min-height: var(--size);
   align-items: center;
   color: #a19f9d;
+  border: 1px solid transparent;
   background-color: rgb(255, 194, 34, 0.1);
   border-radius: 10px;
   margin-left: 20px;
@@ -150,9 +155,9 @@ body * {
 .todo-task-complete .todo-task-title {
   text-decoration: line-through;
 }
-.todo-task:hover .todo-task-del {
+/* .todo-task:hover .todo-task-del {
   display: block;
-}
+} */
 
 .todo-checkbox {
   margin: 0 16px;
@@ -190,11 +195,11 @@ body * {
   bottom: 0;
 }
 
-.todo-task-del {
-  display: none;
+.todo-task-setting {
   margin-left: auto;
   margin-right: 0;
-  font-size: 44px;
+  font-size: 24px;
+  justify-content: center;
 }
 
 .todo-task-title {
