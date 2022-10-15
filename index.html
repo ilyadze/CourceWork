@@ -12,37 +12,71 @@
   <body>
     <div class="container">
       <nav class="menu">
-        <div class="user-account"></div>
-        <div class="bar-element">
-          <a href="" class="my-day">Мой день</a>
+        <div class="user-account">
+          <span class="icon-user"></span>
+          Name
         </div>
-        <div class="bar-element">
-          <a href="" class="important">Важно</a>
+        <div id="menu-search" class="bar-element">
+          <!-- <span class="icon-search"></span> -->
+          <input
+            class="bar-element-search"
+            type="text"
+            placeholder="Поиск задачи"
+          />
         </div>
-        <div class="bar-element">
-          <a href="" class="planned">Запланиравано</a>
+        <div id="menu-my-day" class="bar-element">
+          <span class="icon-sun"></span>
+          Мой день
         </div>
-        <div class="bar-element">
-          <a href="" class="assigned-to-me">Назначено мне</a>
+        <div id="menu-important" class="bar-element">
+          <span class="icon-star-o"></span>
+          Важно
         </div>
-        <div class="bar-element">
-          <a href="" class="tasks">Задачи</a>
+        <div id="menu-planned" class="bar-element">
+          <span class="icon-calendar"></span>
+          Запланиравано
+        </div>
+        <div id="menu-tasks" class="bar-element">
+          <span class="icon-tasks"></span>
+          Задачи
+        </div>
+        <div id="menu-assigned-to-me" class="bar-element">
+          <span class="icon-trash-o"></span>
+          Не пройденные
         </div>
       </nav>
       <div class="page-body">
-        <div class="todo-title">Все задачи</div>
+        <div class="todo-title">
+          <span class="icon-sun"></span>
+          Мой день
+        </div>
         <div class="todo-new">
           <input id="new" type="text" placeholder="Новая задача" />
           <div id="add" class="todo-add">+</div>
         </div>
         <div id="tasks" class="todo-list">
-          <!-- <div class="todo-task todo-task-complete">
-            <label class="todo-checkbox">
-              <input type="checkbox" />
-              <div></div>
-            </label>
-            <div class="todo-task-title">kLKJF</div>
-            <div class="todo-task-del">-</div>
+          <!-- <div class="todo-task-container">
+            <div id="id" class="todo-task todo-task-changing">
+              <label class="todo-checkbox">
+                <input type="checkbox" ${checked} />
+                <div class="todo-checkbox-div"></div>
+              </label>
+              <div class="todo-task-title">${task.text}</div>
+              <div class="todo-task-edit">...</div>
+            </div>
+            <div class="todo-task-settings">
+              <div class="todo-task-date-time">
+                <time datetime="">2341241241</time>
+              </div>
+              <div class="todo-task-options">
+                <div class="todo-task-important">
+                  <span class="icon-star-o"></span>
+                </div>
+                <div class="todo-task-del">
+                  <span class="icon-trash-o"></span>
+                </div>
+              </div>
+            </div>
           </div> -->
         </div>
       </div>

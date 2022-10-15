@@ -20,7 +20,7 @@ body {
 
 .menu {
   height: 810px;
-  width: 160px;
+  width: 180px;
   background-color: #303030;
   border-radius: 10px;
   overflow-x: hidden;
@@ -28,7 +28,6 @@ body {
 
 .container {
   display: grid;
-  padding: 5px;
   grid-template-columns: auto auto;
   justify-content: center;
   grid-gap: 10px;
@@ -36,7 +35,7 @@ body {
 
 .page-body {
   height: 810px;
-  width: 1200px;
+  width: 1230px;
   border-radius: 10px;
   background-color: #303030;
 }
@@ -46,8 +45,10 @@ body {
   position: relative;
   display: block;
   line-height: 36px;
-  font-size: 14px;
-  color: #ffffff;
+  font-size: 16px;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  color: #c6c5c5;
   border: 1px solid transparent;
   transition: all 0.3s;
 }
@@ -60,63 +61,33 @@ body {
 .user-account {
   padding-left: 5px;
   border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 32px;
+  line-height: 50px;
   height: 50px;
-  width: 155px;
+  width: 175px;
   background-color: #ffc222;
 }
 
-a {
-  padding: 0 20px;
-  text-decoration: none;
-  font-family: "PT Serif", serif;
-  font-weight: 400;
-  line-height: 18px;
-  color: #c6c5c5;
-}
-
-.my-day::before {
-  content: "\e971";
-  font-family: "icomoon" !important;
-  position: absolute;
+.icon-trash-o,
+.icon-star-o,
+.icon-calendar,
+.icon-sun,
+.icon-tasks,
+.icon-search,
+.icon-star {
   line-height: 36px;
-  left: 5px;
+  padding-left: 5px;
   color: #ffc222;
 }
 
-.important::before {
-  content: "\f006";
-  font-family: "icomoon" !important;
-  position: absolute;
+.bar-element-search {
+  border-radius: 10px;
+  width: 177px;
   line-height: 36px;
-  left: 5px;
-  color: #ffc222;
 }
-
-.planned::before {
-  content: "\e953";
-  font-family: "icomoon" !important;
-  position: absolute;
-  line-height: 36px;
-  left: 5px;
-  color: #ffc222;
-}
-
-.assigned-to-me::before {
-  content: "\e971";
-  font-family: "icomoon" !important;
-  position: absolute;
-  line-height: 36px;
-  left: 5px;
-  color: #ffc222;
-}
-
-.tasks::before {
-  content: "\f0ae";
-  font-family: "icomoon" !important;
-  position: absolute;
-  line-height: 36px;
-  left: 5px;
-  color: #ffc222;
+.bar-element-search input {
+  border: 0;
 }
 
 body * {
@@ -138,6 +109,7 @@ body * {
   --size: 50px;
   display: flex;
   margin: 16px 0 32px;
+  border: 1px solid transparent;
 }
 
 .todo-new input {
@@ -150,7 +122,7 @@ body * {
 }
 
 .todo-add,
-.todo-task-del {
+.todo-task-edit {
   cursor: pointer;
   text-align: center;
   line-height: var(--size);
@@ -158,10 +130,11 @@ body * {
   color: #c6c5c5;
   height: var(--size);
   width: var(--size);
+  border: 1px solid transparent;
 }
 
 .todo-add:hover,
-.todo-task-del:hover {
+.todo-task-edit:hover {
   border: 1px solid #ffc222;
   border-radius: 10px;
 }
@@ -173,12 +146,13 @@ body * {
   min-height: var(--size);
   align-items: center;
   color: #a19f9d;
+  border: 1px solid transparent;
+  background-color: rgb(255, 194, 34, 0.1);
+  border-radius: 10px;
+  margin-left: 20px;
 }
 .todo-task-complete .todo-task-title {
   text-decoration: line-through;
-}
-.todo-task:hover .todo-task-del {
-  display: block;
 }
 
 .todo-checkbox {
@@ -217,11 +191,11 @@ body * {
   bottom: 0;
 }
 
-.todo-task-del {
-  display: none;
+.todo-task-edit {
   margin-left: auto;
   margin-right: 0;
-  font-size: 44px;
+  font-size: 24px;
+  justify-content: center;
 }
 
 .todo-task-title {
@@ -230,4 +204,44 @@ body * {
 
 .todo-list > *:not(:last-child) {
   margin-bottom: 8px;
+}
+
+.todo-task-settings {
+  cursor: default;
+  --size: 18px;
+  display: flex;
+  min-height: var(--size);
+  align-items: center;
+  color: #a19f9d;
+  border: 1px solid transparent;
+  background-color: rgba(149, 124, 64, 0.5);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-left: 20px;
+}
+
+.todo-task-changing {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.todo-task-options {
+  margin-left: auto;
+  margin-right: 5px;
+  font-size: 24px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.todo-task-important,
+.todo-task-del {
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  line-height: var(--size);
+}
+
+.todo-task-date-time {
+  margin: 0 16px;
 }
